@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Shi Ya - Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+  <nav>
+    <ul class="svg-group">
+      <li>
+        <a href="#portfolio" class="portfolio">
+          <svg viewBox="0 0 10 10" preserveAspectRatio="none">
+            <circle cx="5" cy="5" r="5"></circle>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <a href="#info" class="info">
+          <svg viewBox="0 0 10 10" preserveAspectRatio="none">
+            <circle cx="5" cy="5" r="5"></circle>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <a href="#home" class="home active">
+          <svg viewBox="0 0 10 10" preserveAspectRatio="none">
+            <circle cx="5" cy="5" r="5"></circle>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <section id="home" style="z-index: 2">
+    <div class="home-svg parallax-svg" style="width: 100%; position: absolute; height: 100vh">
+      <svg viewBox="0 0 330 650" style="height: 100%; z-index: -2" class="tri-top">
+        <polygon id="responsiveTopPolygon" points="0,0 0,650 330,0" style="fill: rgb(255, 0, 0)" />
+      </svg>
+      <svg viewBox="0 0 330 650" style="height: 100%; z-index: -1" class="tri-bot">
+        <polygon id="responsiveBottomPolygon" points="0,650 0,190 330,650" style="fill: rgb(255, 255, 0)" />
+      </svg>
+    </div>
+
+    <div class="home-left">
+      <div class="home-intro parallax-text">
+        <div class="home-text">
+          <!-- <div class="hometext"> -->
+          <h2>Hi, Shi Ya here! 👋</h2>
+          <!-- </div> -->
+          <h4>
+            I am a recent Computing Science graduate from the Singapore
+            Institute of Technology.
+          </h4>
+        </div>
+        <div class="socialmediabtns">
+          <div class="socialmediabtn socialmediabtn-1">
+            <a href="https://github.com/osshiya" class="wave-btn" target="_blank" rel="noopener noreferrer"><i
+                class="fa-brands fa-github fa-xl"></i></a>
+          </div>
+          <div class="socialmediabtn socialmediabtn-2">
+            <a href="https://sketchfab.com/osshiya" class="wave-btn" target="_blank" rel="noopener noreferrer"><i
+                class="fa-brands fa-codepen fa-xl"></i></a>
+          </div>
+          <div class="socialmediabtn socialmediabtn-3">
+            <a href="https://osshiya.artstation.com/" class="wave-btn" target="_blank" rel="noopener noreferrer"><i
+                class="fa-brands fa-artstation fa-xl"></i></a>
+          </div>
+          <div class="socialmediabtn socialmediabtn-4">
+            <a href="https://www.linkedin.com/in/osshiya/" class="wave-btn" target="_blank" rel="noopener noreferrer"><i
+                class="fa-brands fa-linkedin fa-xl"></i></a>
+          </div>
+          <div class="socialmediabtn socialmediabtn-5">
+            <a href="mailto: osshiya@gmail.com" class="wave-btn" target="_blank" rel="noopener noreferrer"><i
+                class="fa-solid fa-at fa-xl"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="home-right"></div>
+  </section>
+
+  <section id="info" style="z-index: 3">
+    <div class="container">
+      <div class="parallax-info-text">
+        <div class="more-info">
+          <p></p>
+        </div>
+        <div class="infos">
+          <h2 style="
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                margin-bottom: calc(80px + 1vh);
+              ">
+            ABOUT ME
+          </h2>
+        </div>
+        <div class="more-info-2" style="color: #ffffff">
+          <p>
+            Hello, I'm Shi Ya, a passionate and dedicated software developer
+            who recently graduated with a BSc (Hons) in Computing Science from
+            the Singapore Institute of Technology. My technical expertise
+            spans a range of languages, including Javascript, Python, and SQL,
+            along with proficiency in frameworks and tools such as Flutter,
+            React, and Docker. Beyond coding, I enjoy working on UI/UX design,
+            3D modeling, digital art, video editing, and game development. I
+            enjoy bringing ideas to life — creating projects that reflect my
+            vision and continuously exploring new ways to transform concepts
+            into meaningful, functional applications.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" style="z-index: 2">
+    <div class="container parallax-portfolio-text">
+      <div class="more-portfolio">
+        <h2>PORTFOLIO</h2>
+        <p></p>
+      </div>
+      <div id="carousel">
+        <div id="displaystxt" style="width: 100%; display: flex; flex-direction: row">
+          <!-- <div class="displaystxt-1" style="width: 100%; height: 100%"></div> -->
+          <div class="displaystxt-2" style="width: 100%; height: 100%">
+            <span id="displaystitle" style="
+                  display: block;
+                  text-align: center;
+                  color: #000;
+                  font-size: calc(18px + 0.8vw);
+                  font-weight: bold;
+                  padding: 0 calc(18px + 0.8vw);
+                ">Internal Knowledge Chatbot</span>
+            <div id="displaystag" style="
+                  padding: calc(5px + 0.1vw) calc(18px + 0.8vw)
+                    calc(5px + 0.5vw) calc(18px + 0.8vw);
+                ">
+              <span class="tag meta">2025</span>
+              <span class="tag">ChromaDB</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Flask</span>
+              <span class="tag">Selenium</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Vue.js</span>
+            </div>
+            <p id="displaysdesc" style="
+                  display: block;
+                  text-align: center;
+                  color: #000;
+                  /* font-size: calc(6px + 0.8vw); */
+                  font-weight: 500;
+                  padding: 0 calc(18px + 0.8vw);
+                ">
+              An in-browser chatbot implemented as a Chrome Extension that
+              scrapes data from the current website and uses RAG
+              (Retrieval-Augmented Generation) with an LLM to answer user
+              questions in real time.
+            </p>
+            <div id="displayslink" style="z-index: 10; padding: 6px 0; text-align: center">
+              <a id="displayslink-1" href="" onmouseover="this.style.backgroundColor='grey'"
+                onmouseout="this.style.backgroundColor='#000'" style="
+                    display: none;
+                    border: 2px solid #ffffff;
+                    padding: 1% 3%;
+                    border-radius: 60px;
+                    text-decoration: none;
+                    color: #ffffff;
+                    background-color: #000;
+                  " target="_blank" rel="noopener noreferrer">
+                <span><span class="ext-span">Code
+                    ></span>
+                  <i class="fa-brands fa-github fa-xl" style="color: #ffffff"></i></span>
+              </a>
+              <a id="displayslink-2" href="" onmouseover="this.style.backgroundColor='rgb(0, 128, 255)'"
+                onmouseout=" this.style.backgroundColor='blue'" style="
+                    display: none;
+                    border: 2px solid #ffffff;
+                    padding: 1% 3%;
+                    border-radius: 60px;
+                    text-decoration: none;
+                    color: #ffffff;
+                    background-color: blue;
+                  " target="_blank" rel="noopener noreferrer">
+                <span><span class="ext-span">Demo
+                  </span><i class="fa fa-external-link ext-link" style="color: #ffffff"></i></span></a>
+            </div>
+          </div>
+        </div>
+        <div id="slider" style="padding: 2.5vh 0">
+          <div class="slides slide-9 currentslide" onclick="openImage(this)"
+            data-slide-title="Internal Knowledge Chatbot — AI Knowledge Assistant" data-slide-desc="
+              An AI-powered Chrome Extension that retrieves contextual information from relevant webpages using Retrieval-Augmented Generation (RAG) and LLMs to answer user questions in real time.<br><br>
+
+              Role: Designed and developed the extension workflow, contextual retrieval pipeline, and semantic search integration.<br><br>
+
+              Implemented Selenium-based scraping, ChromaDB vector storage, and Flask backend services to support real-time contextual responses.
+              " data-slide-thumbnail="assets/images/thumbnail/ikc_logo.png"
+            data-slide-preview="assets/images/preview/ikc_preview.png" data-slide-link-1=""
+            data-slide-link-2="https://youtu.be/MVsywKoXH4c" data-slide-link-name-2="Youtube" data-slide-meta-tag="2025"
+            data-slide-tag="ChromaDB, Docker, Flask, Selenium, Tailwind CSS, Vue.js">
+            <img src="assets/images/preview/ikc_preview.png" />
+          </div>
+          <div class="slides slide-8 nnslide" onclick="openImage(this)" data-slide-title="BitDelivery Express"
+            data-slide-desc="
+              A gesture-controlled cyberpunk runner game built using SwiftUI, Vision, AVFoundation, and SpriteKit.<br><br>
+
+              Players control the character through real-time body movements such as jumping and crouching to dodge obstacles and survive.<br><br>
+
+              Explored motion tracking, computer vision, and interactive gameplay systems within the Apple ecosystem.
+              " data-slide-thumbnail="assets/images/thumbnail/bitdeliveryexpress_logo.png"
+            data-slide-preview="assets/images/preview/bitdeliveryexpress_preview.jpg" data-slide-link-1=""
+            data-slide-link-2="https://www.taptap.cn/app/762314?os=ios" data-slide-link-name-2="TapTap"
+            data-slide-meta-tag="2025" data-slide-tag="Swift">
+            <img src="assets/images/thumbnail/bitdeliveryexpress_logo.png" />
+          </div>
+          <div class="slides slide-7 nnnslide" onclick="openImage(this)"
+            data-slide-title="Internship at Sea Limited — Digital Workplace Transformation Team" data-slide-desc="
+              Internship at Sea Limited under the Digital Workplace Transformation Team, contributing to internal tools and workflow systems.<br><br>
+
+              Assisted in developing and maintaining Vue.js applications, including announcement and workflow-related modules used by internal teams.<br><br>
+
+              Built and deployed a World Clock mini-tool and supported documentation and AI knowledge bot initiatives within an enterprise environment.
+              " data-slide-thumbnail="assets/images/thumbnail/sitintern_logo.png"
+            data-slide-preview="assets/images/preview/sitintern_preview.png" data-slide-link-1="" data-slide-link-2=""
+            data-slide-link-name-2="" data-slide-meta-tag="2024, 2025, Intern"
+            data-slide-tag="Vue.js, Internal Tooling, Documentation Systems">
+            <img src="assets/images/thumbnail/sitintern_logo.png" />
+          </div>
+          <div class="slides slide-6 nnnslide" onclick="openImage(this)"
+            data-slide-title="BYOIOT — Build Your Own Internet of Things" data-slide-desc="
+              One of 350 Global Winners of the Swift Student Challenge 2024.<br><br>
+
+              An educational Swift Playground that teaches Internet of Things (IoT) concepts through gamified puzzles and interactive simulations.<br><br>
+
+              Built using Swift and SwiftUI to simplify how sensors, devices, and cloud-connected systems interact in an IoT ecosystem.
+              " data-slide-thumbnail="assets/images/thumbnail/byoiot_logo.png"
+            data-slide-preview="assets/images/preview/byoiot_preview.png"
+            data-slide-link-1="https://github.com/osshiya/BYOIOT" data-slide-link-2="" data-slide-link-name-2=""
+            data-slide-meta-tag="2024" data-slide-tag="Swift Playgrounds, Swift, SwiftUI, Interactive Learning Design">
+            <img src="assets/images/thumbnail/byoiot_logo.png" />
+          </div>
+          <div class="slides slide-5 nnnslide" onclick="openImage(this)" data-slide-title="Whistle" data-slide-desc="
+              An IoT-assisted safety solution designed to support vulnerable individuals facing bullying, threats, or discrimination.<br><br>
+
+              Role: Worked on UI/UX, authentication, BLE communication between the mobile app and M5Stick device, and notification systems.<br><br>
+
+              Integrated Firebase, Flutter, and Google Cloud technologies to support emergency alert workflows and connected device interactions.
+              " data-slide-thumbnail="assets/images/thumbnail/whistle_logo.png"
+            data-slide-preview="assets/images/preview/whistle_preview.png"
+            data-slide-link-1="https://github.com/osshiya/Whistle/commits?author=osshiya"
+            data-slide-link-2="https://youtu.be/5ZcrfmV5S5A" data-slide-link-name-2="Youtube"
+            data-slide-meta-tag="2024, Team" data-slide-tag="Firebase, Flutter, GCP, M5StickC Plus">
+            <img src="assets/images/thumbnail/whistle_logo.png" />
+          </div>
+          <div class="slides slide-4" onclick="openImage(this)"
+            data-slide-title="TravelExp — Cloud-Based Travel Planner" data-slide-desc="
+              A cloud-based travel planner developed as a university project for the Cloud & Distributed Computing module.<br><br>
+
+              Role: Developed the Event Management and Notification modules within a microservice-based architecture.<br><br>
+
+              Implemented gRPC communication, Docker/Kubernetes deployment, and real-time notifications using Spring Scheduler and Server-Sent Events (SSE).
+              " data-slide-thumbnail="assets/images/thumbnail/travelexp_logo.png"
+            data-slide-preview="assets/images/preview/travelexp_preview.png"
+            data-slide-link-1="https://github.com/huilunang/SIT_AY23-24_CSC3104/commits?author=osshiya"
+            data-slide-link-2="" data-slide-link-name-2="" data-slide-meta-tag="2023, Group, Search"
+            data-slide-tag="React, Spring Boot, gRPC, MongoDB, MySQL, Docker, Kubernetes">
+            <img src="assets/images/thumbnail/travelexp_logo.png" />
+          </div>
+          <div class="slides slide-3" onclick="openImage(this)" data-slide-title="Smart Bloobin" data-slide-desc="
+              A recycling information platform that helps users identify recyclable items and locate nearby recycling points.<br><br>
+
+              Role: Developed search functionality and location clustering features using MongoDB and geospatial data handling.<br><br>
+
+              Built as a university project for the Database Systems module focusing on data-driven environmental awareness solutions.
+              " data-slide-thumbnail="assets/images/thumbnail/bloobin_logo.png"
+            data-slide-preview="assets/images/preview/bloobin_preview.png"
+            data-slide-link-1="https://github.com/huilunang/SIT_AY22-23_INF2003/commits?author=osshiya"
+            data-slide-link-2="" data-slide-link-name-2="" data-slide-meta-tag="2023, Group, Search"
+            data-slide-tag="CSS, Docker, Flask, HTML, JavaScript, MariaDB, MongoDB, Python">
+            <img src="assets/images/thumbnail/bloobin_logo.png" />
+          </div>
+          <div class="slides slide-2" onclick="openImage(this)" data-slide-title="Smart Home" data-slide-desc="
+              An IoT smart home dashboard that monitors and controls devices such as lights, fans, and cameras through sensors and manual controls.<br><br>
+
+              Role: Designed the frontend dashboard, UI/UX flow, and MQTT web client integration.<br><br>
+
+              Implemented real-time device communication using MQTT and Raspberry Pi-based hardware systems.
+              " data-slide-thumbnail="assets/images/thumbnail/smarthome_logo.png"
+            data-slide-preview="assets/images/preview/smarthome_preview.png"
+            data-slide-link-1="https://github.com/tan-jia-wen/SmartHome/blob/main/index.html" data-slide-link-2=""
+            data-slide-link-name-2="" data-slide-meta-tag="2023, Group, Frontend, UI"
+            data-slide-tag="CSS, HTML, JavaScript, MQTT, Raspberry Pi 4">
+            <img src="assets/images/thumbnail/smarthome_logo.png" />
+          </div>
+          <div class="slides slide-1 nslide" onclick="openImage(this)"
+            data-slide-title="Internship at AIDC Technology (S) Pte Ltd" data-slide-desc="
+              Internship focused on WordPress development, digital content creation, and website optimization.<br><br>
+
+              Designed and maintained landing pages, animations, and visual assets while supporting SEO and backlink strategies.<br><br>
+
+              Worked with WordPress and Avada Builder to customize responsive websites for business use cases.
+              " data-slide-thumbnail="assets/images/thumbnail/npintern_logo.png"
+            data-slide-preview="assets/images/preview/npintern_preview.png" data-slide-link-1="" data-slide-link-2=""
+            data-slide-link-name-2="" data-slide-meta-tag="2021, 2022, Intern"
+            data-slide-tag="CSS, HTML, JavaScript, jQuery, XHR">
+            <img src="assets/images/thumbnail/npintern_logo.png" />
+          </div>
+          <!-- <div
+              class="slides slide-2 nslide"
+              onclick="openImage(this)"
+              data-slide-title="TikTok Youth Camp 2022 - Hangman"
+              data-slide-desc="A group project involving the creation of a Hangman web game, 
+                developed collaboratively by building a website and integrating APIs to enhance interactivity and functionality. 
+                Worked with new teammates from different local polytechnics and universities, fostering collaboration in the process."
+              data-slide-thumbnail="assets/images/thumbnail/hangman_logo.png"
+              data-slide-preview="assets/images/preview/hangman_preview.png"
+              data-slide-link-1="https://github.com/weihanyeo/HangmanHtml"
+              data-slide-link-2="https://weihanyeo.github.io/HangmanHtml/"
+              data-slide-link-name-2="Demo"
+              data-slide-meta-tag="2022, Team"
+              data-slide-tag="CSS, HTML, JavaScript, jQuery, XHR"
+            >
+              <img src="assets/images/thumbnail/hangman_logo.png" />
+            </div> -->
+          <!-- <div
+                class="slides slide-6 nnnnslide"
+                onclick="openImage(this)"
+                data-slide-title="Visual Novel Web Engine"
+                data-slide-desc="A web-based platform that allows users to create and build visual novels easily, providing tools for story scripting, character management, and interactive scene design."
+                data-slide-thumbnail="assets/images/thumbnail/hangman_logo.png"
+                data-slide-preview="assets/images/preview/visualnovel_preview.png"
+                data-slide-link-1=""
+                data-slide-link-2=""
+                data-slide-link-name-2=""
+                data-slide-meta-tag="2025"
+                data-slide-meta-tag="2025"
+                data-slide-tag="CSS, Flask, HTML, JavaScript, JSON, Pygame, Supabase"
+              >
+                <img src="assets/images/thumbnail/hangman_logo.png" />
+              </div> -->
+          <!-- <div
+              class="slides slide-5 nnnnslide"
+              onclick="openImage(this)"
+              data-slide-title="Form Builder"
+              data-slide-desc="Role: Multi-inputs, PDF Import, Email Setup & Server"
+              data-slide-thumbnail="assets/images/thumbnail/formbuilder_logo.png"
+              data-slide-preview="assets/images/preview/formbuilder_preview.png"
+              data-slide-link-1="https://github.com/amanda-chan/web_assignment/tree/form-builder2"
+              data-slide-link-2="https://github.com/amanda-chan/web_assignment/tree/form-builder2"
+              data-slide-meta-tag="Jul 2023, Group"
+              data-slide-tag="CodeIgniter, MVC, PHP"
+            >
+              <img src="assets/images/thumbnail/formbuilder_logo.png" />
+            </div> -->
+          <!-- <div
+              class="slides slide-4 nnnslide"
+              onclick="openImage(this)"
+              data-slide-title="ATM in Java"
+              data-slide-desc="Role: Customer mode functions"
+              data-slide-thumbnail="assets/images/thumbnail/atm_logo.png"
+              data-slide-preview="assets/images/preview/atm_preview.png"
+              data-slide-link="https://github.com/Kiraow188/CSC1109-Project"
+              data-slide-meta-tag="Mar 2023, Group"
+              data-slide-tag="Java"
+            >
+              <img src="assets/images/thumbnail/atm_logo.png" />
+            </div> -->
+          <!-- <div
+              class="slides slide-2 nslide"
+              onclick="openImage(this)"
+              data-slide-title="Tic-Tac-Toe"
+              data-slide-desc="Role: GUI"
+              data-slide-thumbnail="assets/images/thumbnail/tictactoe_logo.png"
+              data-slide-preview="assets/images/preview/tictactoe_preview.png"
+              data-slide-link="https://github.com/Ryannnnnlye/TicTacToe-Assignment"
+              data-slide-meta-tag="2022, Group, UI"
+              data-slide-tag="C"
+            >
+              <img src="assets/images/thumbnail/tictactoe_logo.png" />
+            </div> -->
+          <!-- <div
+              class="slides slide-7"
+              onclick="openImage(this)"
+              data-slide-title="Resume"
+              data-slide-desc="Take a look at my resume"
+              data-slide-thumbnail="assets/images/thumbnail/resume_logo.png"
+              data-slide-preview="assets/images/preview/resume_preview.png"
+              data-slide-ext-link="assets/documents/resume.pdf"
+            >
+              <img src="assets/images/thumbnail/resume_logo.png" />
+            </div> -->
+        </div>
+      </div>
+      <div class="controls">
+        <a class="prev" onclick="minusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+<!-- Modal -->
+<div id="imageModal" class="modal" onclick="closeImage()">
+  <img id="modalImage" class="modal-content" />
+</div>
+
+</html>
