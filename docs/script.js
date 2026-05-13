@@ -85,8 +85,8 @@ var slideIndex = 1;
 var slides = document.getElementsByClassName("slides");
 
 function setLinks(id, item, name) {
-    const displayLink = document.getElementById(id);
-    const textNode = displayLink.querySelector(".ext-span");
+  const displayLink = document.getElementById(id);
+  const textNode = displayLink.querySelector(".ext-span");
   if (!item) {
     displayLink.style.display = "none";
   } else {
@@ -97,9 +97,33 @@ function setLinks(id, item, name) {
 }
 
 function initSlide() {
+  var getTitle = slides[0].getAttribute("data-slide-title");
+  var getDesc = slides[0].getAttribute("data-slide-desc");
+  var getPreview = slides[0].getAttribute("data-slide-preview");
   var getLink1 = slides[0].getAttribute("data-slide-link-1");
   var getLink2 = slides[0].getAttribute("data-slide-link-2");
-  var getLinkName2 =slides[0].getAttribute("data-slide-link-name-2");
+  var getLinkName2 = slides[0].getAttribute("data-slide-link-name-2");
+  var getMetaTag = slides[0]
+    .getAttribute("data-slide-meta-tag")
+    .split(",")
+    .map((tag) => tag.trim());
+  var getTag = slides[0]
+    .getAttribute("data-slide-tag")
+    .split(",")
+    .map((tag) => tag.trim());
+
+  // Clear and add tags
+  $("#displaystag").empty();
+  getMetaTag.forEach(function (tag) {
+    $("#displaystag").append(`<span class="tag meta">${tag}</span>`);
+  });
+  getTag.forEach(function (tag) {
+    $("#displaystag").append(`<span class="tag">${tag}</span>`);
+  });
+
+  $("#displaystitle").text(getTitle);
+  $("#displaysdesc").html(getDesc);
+
   setLinks("displayslink-1", getLink1, "Code");
   setLinks("displayslink-2", getLink2, getLinkName2);
 }
@@ -120,7 +144,7 @@ function plusSlides(n) {
   var getPreview = slides[0].getAttribute("data-slide-preview");
   var getLink1 = slides[0].getAttribute("data-slide-link-1");
   var getLink2 = slides[0].getAttribute("data-slide-link-2");
-  var getLinkName2 =slides[0].getAttribute("data-slide-link-name-2");
+  var getLinkName2 = slides[0].getAttribute("data-slide-link-name-2");
   var getMetaTag = slides[0]
     .getAttribute("data-slide-meta-tag")
     .split(",")
@@ -163,7 +187,7 @@ function minusSlides(n) {
   var getPreview = slides[0].getAttribute("data-slide-preview");
   var getLink1 = slides[0].getAttribute("data-slide-link-1");
   var getLink2 = slides[0].getAttribute("data-slide-link-2");
-  var getLinkName2 =slides[0].getAttribute("data-slide-link-name-2");
+  var getLinkName2 = slides[0].getAttribute("data-slide-link-name-2");
 
   var getMetaTag = slides[0]
     .getAttribute("data-slide-meta-tag")
@@ -194,20 +218,20 @@ function minusSlides(n) {
   currentSlide.src = getPreview;
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-  var getTitle = slides[0].getAttribute("data-slide-title");
-  var getDesc = slides[0].getAttribute("data-slide-desc");
-  var getLink1 = slides[0].getAttribute("data-slide-link-1");
-  var getLink2 = slides[0].getAttribute("data-slide-link-2");
-  var getLinkName2 =slides[0].getAttribute("data-slide-link-name-2");
-  $("#displaystitle").text(getTitle);
-  $("#displaysdesc").html(getDesc);
+// // Thumbnail image controls
+// function currentSlide(n) {
+//   showSlides((slideIndex = n));
+//   var getTitle = slides[0].getAttribute("data-slide-title");
+//   var getDesc = slides[0].getAttribute("data-slide-desc");
+//   var getLink1 = slides[0].getAttribute("data-slide-link-1");
+//   var getLink2 = slides[0].getAttribute("data-slide-link-2");
+//   var getLinkName2 =slides[0].getAttribute("data-slide-link-name-2");
+//   $("#displaystitle").text(getTitle);
+//   $("#displaysdesc").html(getDesc);
 
-  setLinks("displayslink-1", getLink1, "Code");
-  setLinks("displayslink-2", getLink2, getLinkName2);
-}
+//   setLinks("displayslink-1", getLink1, "Code");
+//   setLinks("displayslink-2", getLink2, getLinkName2);
+// }
 
 function showSlides(n) {
   var i;
